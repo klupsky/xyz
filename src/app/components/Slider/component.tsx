@@ -1,8 +1,9 @@
 'use client'
 import { useState } from 'react'
-import { TSliderData } from '../../../../types/types'
 import Background from '../Background/component'
+import MainImage from '../MainImage/component'
 import Thumbnail from '../Thumbnail/component'
+import { TSliderData } from './types'
 
 export default function Slider({ data }: { data: TSliderData }) {
   const { projects } = data
@@ -19,13 +20,18 @@ export default function Slider({ data }: { data: TSliderData }) {
     setActiveProjectId(direction === 'isPrev' ? prevProjectId : nextProjectId)
   }
 
-  console.log(activeProjectId)
-
   return (
     <>
       <Background image={projects[activeProjectId].image} />
       <Thumbnail direction="isPrev" handleClick={handleClick} />
       <Thumbnail direction="isNext" handleClick={handleClick} />
+      <MainImage
+        title={projects[activeProjectId].title}
+        image={projects[activeProjectId].image}
+        projectCount={projectCount}
+        projectId={projects[activeProjectId].id}
+        activeProjectId={activeProjectId}
+      />
     </>
   )
 }

@@ -1,25 +1,21 @@
 import styled, { css } from 'styled-components'
+import { TWrapperProps } from './types'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<TWrapperProps>`
   position: absolute;
-  ${(p) =>
-    p.direction == 'isPrev'
-      ? css`
-          top: 16px;
-          left: 16px;
-          background-color: red;
-        `
-      : css`
-          bottom: 16px;
-          right: 16px;
-          background-color: yellow;
-        `}
-
   height: 40px;
   width: 40px;
   z-index: 1;
+  cursor: pointer;
 
-  :hover {
-    cursor: pointer;
-  }
+  ${({ direction }) =>
+    direction === 'isPrev'
+      ? css`
+          top: var(--pd-sm);
+          left: var(--pd-sm);
+        `
+      : css`
+          bottom: var(--pd-sm);
+          right: var(--pd-sm);
+        `}
 `

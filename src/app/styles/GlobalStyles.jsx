@@ -7,6 +7,8 @@ const CustomStyles = createGlobalStyle`
     --c-white: #FFFFFF;
     --c-black: #000000;
     --c-grey: #303030;
+
+    --p-sm: var(--pd-sm);
 }
 
 body {

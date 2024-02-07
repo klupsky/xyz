@@ -6,8 +6,10 @@ export const TUNGSTEN = {
     font-weight: 600;
     font-size: 220px;
     line-height: 176px;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
+    color: var(--c-white);
+    text-align: center;
   `,
 }
 
@@ -17,7 +19,7 @@ export const HELVETICA = {
     font-weight: 400;
     font-style: normal;
     font-size: 10px;
-    letter-spacing: 8%;
+    letter-spacing: 0.08em;
     line-height: 12px;
     text-transform: uppercase;
   `,
