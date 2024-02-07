@@ -10,12 +10,12 @@ export const size = {
 }
 
 export const device = {
-  mobileS: `@media (min-width: ${SIZE.mobileS}px)`,
-  mobileM: `@media (min-width: ${SIZE.mobileM}px)`,
-  mobileL: `@media (min-width: ${SIZE.mobileL}px)`,
-  tablet: `@media (min-width: ${SIZE.tablet}px)`,
-  laptop: `@media (min-width: ${SIZE.laptop}px)`,
-  laptopM: `@media (min-width: ${SIZE.laptopM}px)`,
-  laptopL: `@media (min-width: ${SIZE.laptopL}px)`,
-  desktop: `@media (min-width: ${SIZE.desktop}px)`,
+  mobileS: `@media (min-width: ${size.mobileS}px)`,
+  mobileM: `@media (min-width: ${size.mobileM}px)`,
+  mobileL: `@media (min-width: ${size.mobileL}px)`,
+  tablet: `@media (min-width: ${size.tablet}px)`,
+  laptop: `@media (min-width: ${size.laptop}px)`,
+  laptopM: `@media (min-width: ${size.laptopM}px)`,
+  laptopL: `@media (min-width: ${size.laptopL}px)`,
+  desktop: `@media (min-width: ${size.desktop}px)`,
 }
