@@ -1,16 +1,10 @@
-import image01 from './assets/images/image01.jpg'
-import image02 from './assets/images/image02.jpg'
-import image03 from './assets/images/image03.jpg'
-import image04 from './assets/images/image04.jpg'
-import image05 from './assets/images/image05.jpg'
-
 const data = {
   title: 'XYZ Photography',
-  slides: [
+  projects: [
     {
       id: 1,
       image: {
-        src: image01,
+        src: 'image01',
         alt: 'black and white photo of a male nude from behind',
       },
       title: 'Everyday Flowers',
@@ -22,7 +16,7 @@ const data = {
     {
       id: 2,
       image: {
-        src: image02,
+        src: 'image02',
         alt: 'closeup photo of a female torso in a bodysuit',
       },
       title: 'The wilder night',
@@ -34,7 +28,7 @@ const data = {
     {
       id: 3,
       image: {
-        src: image03,
+        src: 'image03',
         alt: 'closeup photo of a furry lama',
       },
       title: 'Smooth Memories',
@@ -46,7 +40,7 @@ const data = {
     {
       id: 4,
       image: {
-        src: image04,
+        src: 'image04',
         alt: 'abstract photo of golden shades',
       },
       title: 'The Future Universe',
@@ -58,7 +52,7 @@ const data = {
     {
       id: 5,
       image: {
-        src: image05,
+        src: 'image05',
         alt: 'abstract black and white photo of a body silhouette behind a curtain',
       },
       title: 'She was born Urban',
