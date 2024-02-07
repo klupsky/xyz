@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-export const tungsten = {
+export const TUNGSTEN = {
   style: css`
     font-family: 'Tungsten';
     font-weight: 600;
@@ -11,7 +11,7 @@ export const tungsten = {
   `,
 }
 
-export const helvetica = {
+export const HELVETICA = {
   style: css`
     font-family: 'Helvetica', sans-serif;
     font-weight: 400;

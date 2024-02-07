@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { helvetica } from './base/fonts'
+import { HELVETICA } from './base/fonts'
 
 const CustomStyles = createGlobalStyle`
 
@@ -11,7 +11,9 @@ const CustomStyles = createGlobalStyle`
 body {
     height: 100dvh;
     height: 100vh;
-    ${helvetica.style}
+    overflow: hidden;
+    overscroll-behavior-y: none;
+    ${HELVETICA.style}
 }`
 
 export function GlobalStyles() {
