@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   height: 100%;
 
   img {
-    filter: blur(120px);
+    filter: blur(50px);
     object-fit: cover;
     width: 100%;
     height: 100%;
