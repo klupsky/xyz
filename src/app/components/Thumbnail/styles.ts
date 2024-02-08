@@ -1,11 +1,12 @@
+import { DEVICE } from '@/app/styles/base/breakpoints'
 import styled, { css } from 'styled-components'
 import { TWrapperProps } from './types'
 
 export const Wrapper = styled.div<TWrapperProps>`
   position: absolute;
   overflow: hidden;
-  width: var(--thumbnail-width);
-  height: var(--thumbnail-height);
+  width: var(--thumbnail-width-m);
+  height: var(--thumbnail-height-m);
   border-radius: 10px;
   border: 1px solid var(--c-black);
   z-index: 2;
@@ -20,4 +21,9 @@ export const Wrapper = styled.div<TWrapperProps>`
           top: var(--p-sm);
           right: var(--p-sm);
         `};
+
+  ${DEVICE.tablet} {
+    width: var(--thumbnail-width);
+    height: var(--thumbnail-height);
+  }
 `

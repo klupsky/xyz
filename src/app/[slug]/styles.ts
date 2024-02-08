@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DEVICE } from '../styles/base/breakpoints'
 import { HELVETICA, TUNGSTEN } from '../styles/base/fonts'
 
 export const ErrorWrapper = styled.div`
@@ -36,7 +37,12 @@ export const ImageWrapper = styled.div`
   border-radius: 10px;
   border: 1px solid var(--c-black);
   margin: var(--p-sm);
-  height: calc(100vh - 2 * var(--p-sm));
+  width: calc(100vw - 2 * var(--p-sm));
   aspect-ratio: 4/5;
   z-index: 2;
+
+  ${DEVICE.tablet} {
+    height: calc(100vh - 2 * var(--p-sm));
+    width: auto;
+  }
 `

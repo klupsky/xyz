@@ -4,10 +4,12 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   position: absolute;
+  width: var(--thumbnail-width-m);
+  right: var(--p-sm);
+  bottom: var(--p-sm);
 
   ${DEVICE.tablet} {
     bottom: 95px;
-    right: var(--p-sm);
     width: var(--thumbnail-width);
   }
 `
@@ -33,6 +35,7 @@ export const Cta = styled.button`
   ${HELVETICA.style}
   font-weight: 700;
   font-weight: bold;
+  text-align: center;
 
   color: var(--c-black);
   letter-spacing: 0.08em;
