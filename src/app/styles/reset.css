@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  /* cursor: none; */
 }
 ol,
 ul {
@@ -135,7 +136,4 @@ button {
 a {
   text-decoration: none;
   color: inherit;
-}
-a:hover {
-  cursor: pointer;
 }

@@ -36,9 +36,4 @@ export const Cta = styled.button`
 
   color: var(--c-black);
   letter-spacing: 0.08em;
-  ${DEVICE.tablet} {
-    :hover {
-      cursor: pointer;
-    }
-  }
 `

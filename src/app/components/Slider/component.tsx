@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
+import Cursor from '../Cursor/component'
 import Index from '../Index/component'
 import InfoBox from '../InfoBox/component'
 import Thumbnail from '../Thumbnail/component'
@@ -25,35 +26,38 @@ export default function Slider({ data }: { data: TSliderData }) {
   }
 
   return (
-    <Wrapper>
-      <Background image={projects[activeProjectId].image} />
-      <Title>{title}</Title>
-      <CenterImage
-        title={projects[activeProjectId].title}
-        image={projects[activeProjectId].image}
-      />
-      <Index
-        projectId={projects[activeProjectId].id}
-        activeProjectId={activeProjectId}
-        projectCount={projectCount}
-      />
-      <InfoBox
-        date={projects[activeProjectId].date}
-        client={projects[activeProjectId].client}
-        artist={projects[activeProjectId].artist}
-        slug={projects[activeProjectId].slug}
-        cta={projects[activeProjectId].cta}
-      />
-      <Thumbnail
-        direction="isPrev"
-        image={projects[prevProjectId].image}
-        handleClick={handleClick}
-      />
-      <Thumbnail
-        direction="isNext"
-        image={projects[nextProjectId].image}
-        handleClick={handleClick}
-      />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Background image={projects[activeProjectId].image} />
+        <Title>{title}</Title>
+        <CenterImage
+          title={projects[activeProjectId].title}
+          image={projects[activeProjectId].image}
+        />
+        <Index
+          projectId={projects[activeProjectId].id}
+          activeProjectId={activeProjectId}
+          projectCount={projectCount}
+        />
+        <InfoBox
+          date={projects[activeProjectId].date}
+          client={projects[activeProjectId].client}
+          artist={projects[activeProjectId].artist}
+          slug={projects[activeProjectId].slug}
+          cta={projects[activeProjectId].cta}
+        />
+        <Thumbnail
+          direction="isPrev"
+          image={projects[prevProjectId].image}
+          handleClick={handleClick}
+        />
+        <Thumbnail
+          direction="isNext"
+          image={projects[nextProjectId].image}
+          handleClick={handleClick}
+        />
+        <Cursor />
+      </Wrapper>
+    </>
   )
 }

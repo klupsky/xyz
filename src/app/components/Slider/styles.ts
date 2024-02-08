@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  ${HELVETICA.style}
+  ${HELVETICA.style};
+  z-index: 1;
 `
 
 export const Title = styled.h2`
