@@ -3,19 +3,15 @@ import { TWrapperProps } from './types'
 
 export const Wrapper = styled.div<TWrapperProps>`
   position: absolute;
-  height: 40px;
-  width: 40px;
-  z-index: 1;
-  cursor: pointer;
 
-  ${({ direction }) =>
-    direction === 'isPrev'
+  ${(p) =>
+    p.direction == 'isPrev'
       ? css`
-          top: var(--pd-sm);
-          left: var(--pd-sm);
+          top: 16px;
+          left: 16px;
         `
       : css`
-          bottom: var(--pd-sm);
-          right: var(--pd-sm);
+          bottom: 16px;
+          right: 16px;
         `}
 `

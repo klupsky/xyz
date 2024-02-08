@@ -1,5 +1,7 @@
-export type TThumbnailProps = {}
+import { TImage } from '../Slider/types'
 
-export type TWrapperProps = {
+export type TThumbnailProps = {
   direction: 'isPrev' | 'isNext'
+  image: TImage
+  handleClick: (direction: 'isPrev' | 'isNext') => void
 }

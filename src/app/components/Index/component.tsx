@@ -11,7 +11,6 @@ export default function Index({
     <IndexDot key={index} isActive={index == activeProjectId && true} />
   ))
 
-  console.log(projectId, activeProjectId)
   return (
     <Wrapper>
       {projectId} of {projectCount}

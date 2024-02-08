@@ -1,8 +1,8 @@
 'use client'
-import Image from 'next/image'
-import Index from '../Index/component'
-import { BackgroundTitle, BackgroundTitleWrapper, Wrapper } from './styles'
-import { TMainImageProps } from './types'
+import Image from 'next/image';
+import Index from '../Index/component';
+import { BackgroundTitle, BackgroundTitleWrapper, Wrapper } from './styles';
+import { TMainImageProps } from './types';
 
 export default function MainImage({
   image,
@@ -17,7 +17,7 @@ export default function MainImage({
     <Wrapper>
       <BackgroundTitle>{title}</BackgroundTitle>
 
-      {/* <ImageWrapper></ImageWrapper>
+      {/* <ImageWrapper><Image/></ImageWrapper>
       // <FrontTitle>{title}</FrontTitle> */}
       <Index
         projectId={projectId}
