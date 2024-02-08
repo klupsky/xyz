@@ -3,15 +3,32 @@ import data from '@/app/lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import Background from '../components/Background/component'
-import { ImageWrapper, Wrapper } from './styles'
+import {
+  ErrorMessage,
+  ErrorTitle,
+  ErrorWrapper,
+  ImageWrapper,
+  Wrapper,
+} from './styles'
 import { TProjectProps } from './types'
 
 export default function Project({ params }: TProjectProps) {
   const project = data.projects.find((project) => project.slug === params.slug)
   const projectImage = project ? project.image : null
-  const { src, alt } = projectImage
+  if (!projectImage) {
+    return (
+      <Link href="/">
+        <ErrorWrapper>
+          <ErrorTitle>xyz photographers</ErrorTitle>
+          <ErrorMessage>
+            this image hasn't been taken yet. return to homepage.
+          </ErrorMessage>
+        </ErrorWrapper>
+      </Link>
+    )
+  }
 
-  console.log(src)
+  const { src, alt } = projectImage
 
   return (
     <Link href="/">
