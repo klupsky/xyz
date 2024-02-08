@@ -2,9 +2,14 @@
   --c-white: #ffffff;
   --c-black: #000000;
   --c-grey: #303030;
+  --p-xs: 8px;
   --p-sm: 16px;
+  --thumbnail-width: 248px;
+  --thumbnail-height: 330px;
 }
 
 body {
   font-family: 'Helvetica', sans-serif;
+  background-color: var(--c-grey);
+  color: var(--c-white);
 }

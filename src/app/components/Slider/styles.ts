@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   overflow: hidden;
   overscroll-behavior-y: none;
   position: relative;
-  background-color: var(--c-grey);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   ${HELVETICA.style}

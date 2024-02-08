@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
 import Index from '../Index/component'
+import InfoBox from '../InfoBox/component'
 import Thumbnail from '../Thumbnail/component'
 import { Title, Wrapper } from './styles'
 import { TSliderData } from './types'
@@ -35,6 +36,13 @@ export default function Slider({ data }: { data: TSliderData }) {
         projectId={projects[activeProjectId].id}
         activeProjectId={activeProjectId}
         projectCount={projectCount}
+      />
+      <InfoBox
+        date={projects[activeProjectId].date}
+        client={projects[activeProjectId].client}
+        artist={projects[activeProjectId].artist}
+        slug={projects[activeProjectId].slug}
+        cta={projects[activeProjectId].cta}
       />
       <Thumbnail
         direction="isPrev"

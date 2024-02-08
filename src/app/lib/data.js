@@ -18,7 +18,7 @@ const data = {
       id: 2,
       image: {
         src: 'image02',
-        alt: 'closeup fashion photo of a female torso covered in dried mud',
+        alt: 'closeup fashion shoot of a female torso covered in dried mud',
       },
       title: 'The wilder night',
       artist: 'Johanna Hobel',

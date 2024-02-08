@@ -16,12 +16,13 @@ export const Wrapper = styled.div`
 
 export const IndexDotsWrapper = styled.div`
   display: flex;
-  gap: 8px;
+  gap: var(--p-xs);
 `
 
 export const IndexDot = styled.div<TIndexDotProps>`
   width: 5px;
-  height: 8px;
+  height: var(--p-xs);
+  gap: var(--p-xs);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

@@ -1,1 +1,7 @@
-export type TSliderProps = {}
+export type TInfoBoxProps = {
+  date: string
+  client: string
+  artist: string
+  slug: string
+  cta: string
+}
