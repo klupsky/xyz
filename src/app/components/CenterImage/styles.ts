@@ -15,12 +15,11 @@ export const BackgroundTitle = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 8ch;
-  max-width: 350px;
+  width: 11ch;
+  max-width: calc(100vw - 2 * var(--p-sm));
 
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
-    width: 11ch;
     max-width: 860px;
     left: 50.3%;
   }
@@ -52,13 +51,12 @@ export const FrontTitle = styled.h1`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8ch;
-  max-width: 350px;
+  width: 11ch;
+  max-width: calc(100vw - 2 * var(--p-sm));
 
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
     left: 50.3%;
-    width: 11ch;
     max-width: 860px;
   }
 `

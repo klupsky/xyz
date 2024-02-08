@@ -29,4 +29,8 @@ export const Title = styled.h2`
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0.08em;
+  ${DEVICE.tablet} {
+    font-size: 16px;
+    line-height: 1;
+  }
 `

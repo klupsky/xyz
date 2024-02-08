@@ -14,6 +14,10 @@ export const ErrorTitle = styled.h1`
   letter-spacing: 0.08em;
   text-align: left;
   padding-bottom: var(--p-xs);
+  ${DEVICE.tablet} {
+    font-size: 16px;
+    line-height: 1;
+  }
 `
 
 export const ErrorMessage = styled.h1`

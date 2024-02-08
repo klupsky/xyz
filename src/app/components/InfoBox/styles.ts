@@ -35,13 +35,7 @@ export const Cta = styled.button`
   ${HELVETICA.style}
   font-weight: 700;
   font-weight: bold;
-  text-align: center;
-
   color: var(--c-black);
   letter-spacing: 0.08em;
-  ${DEVICE.tablet} {
-    :hover {
-      cursor: pointer;
-    }
-  }
+  text-align: center;
 `
