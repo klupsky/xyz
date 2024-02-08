@@ -2,5 +2,9 @@
   --c-white: #ffffff;
   --c-black: #000000;
   --c-grey: #303030;
-  --p-sm: var(--pd-sm);
+  --p-sm: 16px;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
 }

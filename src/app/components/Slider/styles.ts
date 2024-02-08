@@ -1,4 +1,4 @@
-import { HELVETICA } from '@/app/styles/base/fonts'
+import { HELVETICA, TUNGSTEN } from '@/app/styles/base/fonts'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -11,4 +11,15 @@ export const Wrapper = styled.div`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   ${HELVETICA.style}
+`
+
+export const Title = styled.h2`
+  position: absolute;
+  top: var(--p-sm);
+  left: var(--p-sm);
+  z-index: 1;
+  ${TUNGSTEN.style}
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.08em;
 `

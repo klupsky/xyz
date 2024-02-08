@@ -13,11 +13,11 @@ export const Wrapper = styled.div<TWrapperProps>`
   ${(p) =>
     p.direction == 'isPrev'
       ? css`
-          bottom: 16px;
-          left: 16px;
+          bottom: var(--p-sm);
+          left: var(--p-sm);
         `
       : css`
-          top: 16px;
-          right: 16px;
+          top: var(--p-sm);
+          right: var(--p-sm);
         `};
 `

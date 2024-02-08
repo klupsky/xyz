@@ -4,11 +4,11 @@ import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
 import Index from '../Index/component'
 import Thumbnail from '../Thumbnail/component'
-import { Wrapper } from './styles'
+import { Title, Wrapper } from './styles'
 import { TSliderData } from './types'
 
 export default function Slider({ data }: { data: TSliderData }) {
-  const { projects } = data
+  const { projects, title } = data
   const [activeProjectId, setActiveProjectId] = useState(0)
 
   const projectCount = projects.length
@@ -26,6 +26,7 @@ export default function Slider({ data }: { data: TSliderData }) {
   return (
     <Wrapper>
       <Background image={projects[activeProjectId].image} />
+      <Title>{title}</Title>
       <CenterImage
         title={projects[activeProjectId].title}
         image={projects[activeProjectId].image}
