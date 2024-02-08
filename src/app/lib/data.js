@@ -12,18 +12,20 @@ const data = {
       client: 'For Vogue',
       date: 'Jun 2019',
       cta: 'Have a look',
+      slug: 'everyday-flowers',
     },
     {
       id: 2,
       image: {
         src: 'image02',
-        alt: 'closeup photo of a female torso in a bodysuit',
+        alt: 'closeup fashion photo of a female torso covered in dried mud',
       },
       title: 'The wilder night',
       artist: 'Johanna Hobel',
       client: 'For Wild',
       date: 'Dec 2019',
       cta: 'Have a look',
+      slug: 'the-wilder-night',
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ const data = {
       client: 'For Chanel',
       date: 'Feb 2020',
       cta: 'Have a look',
+      slug: 'smooth-memories',
     },
     {
       id: 4,
@@ -48,6 +51,7 @@ const data = {
       client: 'For On',
       date: 'Apr 2020',
       cta: 'Have a look',
+      slug: 'the-future-universe',
     },
     {
       id: 5,
@@ -60,6 +64,7 @@ const data = {
       client: 'For Si',
       date: 'Dec 2021',
       cta: 'Have a look',
+      slug: 'she-was-born-urban',
     },
   ],
 }

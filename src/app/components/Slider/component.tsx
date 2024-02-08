@@ -4,6 +4,7 @@ import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
 import Index from '../Index/component'
 import Thumbnail from '../Thumbnail/component'
+import { Wrapper } from './styles'
 import { TSliderData } from './types'
 
 export default function Slider({ data }: { data: TSliderData }) {
@@ -23,7 +24,7 @@ export default function Slider({ data }: { data: TSliderData }) {
   }
 
   return (
-    <>
+    <Wrapper>
       <Background image={projects[activeProjectId].image} />
       <CenterImage
         title={projects[activeProjectId].title}
@@ -44,6 +45,6 @@ export default function Slider({ data }: { data: TSliderData }) {
         image={projects[nextProjectId].image}
         handleClick={handleClick}
       />
-    </>
+    </Wrapper>
   )
 }

@@ -11,6 +11,7 @@ export type TProject = {
   client: string
   date: string
   cta: string
+  slug: string
 }
 
 export type TSliderData = {
