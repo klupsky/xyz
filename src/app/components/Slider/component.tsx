@@ -6,7 +6,7 @@ import Cursor from '../Cursor/component'
 import Index from '../Index/component'
 import InfoBox from '../InfoBox/component'
 import Thumbnail from '../Thumbnail/component'
-import { Title, Wrapper } from './styles'
+import { DesktopCursorWrapper, Title, Wrapper } from './styles'
 import { TSliderData } from './types'
 
 export default function Slider({ data }: { data: TSliderData }) {
@@ -56,7 +56,9 @@ export default function Slider({ data }: { data: TSliderData }) {
           image={projects[nextProjectId].image}
           handleClick={handleClick}
         />
-        <Cursor />
+        <DesktopCursorWrapper>
+          <Cursor />{' '}
+        </DesktopCursorWrapper>
       </Wrapper>
     </>
   )

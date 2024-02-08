@@ -20,7 +20,7 @@ export default function InfoBox({
       <InnerWrapper>
         <CreditWrapper>
           <h3>{artist}</h3>
-          <p>for {client}</p>
+          <p>{client}</p>
         </CreditWrapper>
         <DateWrapper>{date}</DateWrapper>
         <Link href={`/${slug}`}>

@@ -1,5 +1,13 @@
+import { DEVICE } from '@/app/styles/base/breakpoints'
 import { HELVETICA, TUNGSTEN } from '@/app/styles/base/fonts'
 import styled from 'styled-components'
+
+export const DesktopCursorWrapper = styled.div`
+  display: none;
+  ${DEVICE.tablet} {
+    display: block;
+  }
+`
 
 export const Wrapper = styled.div`
   height: 100dvh;
@@ -22,4 +30,8 @@ export const Title = styled.h2`
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0.08em;
+  ${DEVICE.tablet} {
+    font-size: 16px;
+    line-height: 1;
+  }
 `
