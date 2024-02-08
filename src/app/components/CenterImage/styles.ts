@@ -1,6 +1,6 @@
 import { DEVICE } from '@/app/styles/base/breakpoints'
 import { TUNGSTEN } from '@/app/styles/base/fonts'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
