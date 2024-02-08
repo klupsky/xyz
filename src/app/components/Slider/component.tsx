@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import Background from '../Background/component'
-import MainImage from '../MainImage/component'
+import CenterImage from '../CenterImage/component'
+import Index from '../Index/component'
 import Thumbnail from '../Thumbnail/component'
 import { TSliderData } from './types'
 
@@ -24,12 +25,14 @@ export default function Slider({ data }: { data: TSliderData }) {
   return (
     <>
       <Background image={projects[activeProjectId].image} />
-      <MainImage
+      <CenterImage
         title={projects[activeProjectId].title}
         image={projects[activeProjectId].image}
-        projectCount={projectCount}
+      />
+      <Index
         projectId={projects[activeProjectId].id}
         activeProjectId={activeProjectId}
+        projectCount={projectCount}
       />
       <Thumbnail
         direction="isPrev"
