@@ -24,6 +24,13 @@ export default function Slider({ data }: { data: TSliderData }) {
   return (
     <>
       <Background image={projects[activeProjectId].image} />
+      <MainImage
+        title={projects[activeProjectId].title}
+        image={projects[activeProjectId].image}
+        projectCount={projectCount}
+        projectId={projects[activeProjectId].id}
+        activeProjectId={activeProjectId}
+      />
       <Thumbnail
         direction="isPrev"
         image={projects[prevProjectId].image}
@@ -33,13 +40,6 @@ export default function Slider({ data }: { data: TSliderData }) {
         direction="isNext"
         image={projects[nextProjectId].image}
         handleClick={handleClick}
-      />
-      <MainImage
-        title={projects[activeProjectId].title}
-        image={projects[activeProjectId].image}
-        projectCount={projectCount}
-        projectId={projects[activeProjectId].id}
-        activeProjectId={activeProjectId}
       />
     </>
   )

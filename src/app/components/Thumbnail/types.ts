@@ -5,3 +5,7 @@ export type TThumbnailProps = {
   image: TImage
   handleClick: (direction: 'isPrev' | 'isNext') => void
 }
+
+export type TWrapperProps = {
+  direction: 'isPrev' | 'isNext'
+}

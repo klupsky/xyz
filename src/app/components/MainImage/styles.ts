@@ -15,11 +15,14 @@ export const BackgroundTitle = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
     width: 11ch;
     max-width: 860px;
   }
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-white);
 `
 
 export const FrontTitle = styled.h1`

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import TIndexDotProps from './types'
+import { TIndexDotProps } from './types'
 
 export const Wrapper = styled.div`
   width: fit-content;

@@ -12,7 +12,7 @@ export default function Thumbnail({
 
   return (
     <Wrapper direction={direction} onClick={() => handleClick(direction)}>
-      <Image src={`/${src}.jpg`} alt={alt} priority width={100} height={100} />
+      <Image src={`/${src}.jpg`} alt={alt} fill sizes="100vw" />
     </Wrapper>
   )
 }

@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 export const TUNGSTEN = {
   style: css`
     font-family: 'Tungsten';
-    font-weight: 600;
+    font-weight: 400;
     font-size: 220px;
     line-height: 176px;
     letter-spacing: 0.04em;
