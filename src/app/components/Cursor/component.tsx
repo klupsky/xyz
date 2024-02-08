@@ -32,9 +32,6 @@ const Cursor = () => {
     },
   }
 
-  const springConfig = { damping: 15, stiffness: 300 }
-  const springStyle = useSpring({ x, y, config: springConfig })
-
   return (
     <motion.div
       variants={variants}
