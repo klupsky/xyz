@@ -25,15 +25,33 @@ export const BackgroundTitle = styled.h1`
   -webkit-text-stroke: 1px var(--c-white);
 `
 
+export const ImageWrapper = styled.div`
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px solid var(--c-black);
+  z-index: 3;
+  height: 680px;
+  width: 512px;
+`
+
 export const FrontTitle = styled.h1`
   position: absolute;
   top: 50%;
-  left: 50.3%;
+  left: 50.7%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 1;
+
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
     width: 11ch;
     max-width: 860px;
   }
+  /* color: transparent;
+  -webkit-text-stroke: 1px var(--c-white); */
 `

@@ -4,7 +4,6 @@ import { TWrapperProps } from './types'
 export const Wrapper = styled.div<TWrapperProps>`
   position: absolute;
   overflow: hidden;
-
   width: 248px;
   height: 330px;
   border-radius: 10px;

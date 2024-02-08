@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   gap: 22px;
   position: absolute;
   top: 70%;
-  left: 50.3%;
+  left: 50%;
   transform: translate(-50%, -50%);
 `
 
