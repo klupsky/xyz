@@ -20,9 +20,5 @@ export const IndexDot = styled.div<TIndexDotProps>`
   border: 1px solid var(--c-white);
   transition: all 0.3s ease-in-out;
 
-  ${({ isActive }) =>
-    isActive &&
-    `
-    background-color: var(--c-white);
-  `}
+  ${(p) => p.$isactive && `background-color: var(--c-white);`}
 `

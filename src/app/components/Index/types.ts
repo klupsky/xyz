@@ -5,5 +5,5 @@ export type TIndexProps = {
 }
 
 export type TIndexDotProps = {
-  isActive: boolean
+  $isactive?: boolean
 }

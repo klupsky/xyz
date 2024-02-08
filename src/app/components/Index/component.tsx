@@ -8,7 +8,7 @@ export default function Index({
   projectCount,
 }: TIndexProps) {
   const IndexDots = Array.from({ length: projectCount }, (_, index) => (
-    <IndexDot key={index} isActive={index == activeProjectId && true} />
+    <IndexDot key={index} $isactive={index === activeProjectId} />
   ))
 
   return (

@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const BackgroundTitle = styled.h1`
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50.3%;
   transform: translate(-50%, -50%);
   z-index: 1;
 
@@ -28,7 +28,7 @@ export const BackgroundTitle = styled.h1`
 export const FrontTitle = styled.h1`
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50.3%;
   transform: translate(-50%, -50%);
   z-index: 3;
   ${TUNGSTEN.style}
