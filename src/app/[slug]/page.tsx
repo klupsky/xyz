@@ -21,7 +21,7 @@ export default function Project({ params }: TProjectProps) {
         <ErrorWrapper>
           <ErrorTitle>xyz photographers</ErrorTitle>
           <ErrorMessage>
-            this image hasn't been taken yet. return to homepage.
+            this image hasn&apos;t been taken yet. return to homepage.
           </ErrorMessage>
         </ErrorWrapper>
       </Link>
