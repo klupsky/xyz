@@ -20,10 +20,10 @@ const Circle = ({ percentage, colour }) => {
         cx={21}
         cy={21}
         fill="transparent"
-        stroke={strokePct !== circ ? colour : ''}
+        stroke={colour === 'var(--c-white)' ? '' : 'black'}
         strokeWidth="1px"
-        strokeDasharray={circ}
-        strokeDashoffset={percentage ? strokePct : 0}
+        strokeDasharray={colour === 'var(--c-white)' ? circ : strokePct}
+        strokeDashoffset={colour === 'var(--c-white)' ? 0 : 0}
         opacity="0.9"
       ></circle>
       <circle r={dotRadius} cx={21} cy={21} fill="white"></circle>
@@ -76,7 +76,7 @@ const Cursor = () => {
     <motion.div
       variants={variants}
       animate="default"
-      style={{ zIndex: 5, position: 'absolute' }}
+      style={{ zIndex: 5, position: 'absolute', pointerEvents: 'none' }}
     >
       <Pie percentage={50} />
     </motion.div>
