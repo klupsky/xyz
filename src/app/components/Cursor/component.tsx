@@ -8,17 +8,15 @@ const onMouseMove = (e: MouseEvent) => {
   document.body.style.setProperty('--x', `${mouseX}px`)
   document.body.style.setProperty('--y', `${mouseY}px`)
 }
-
 const Cursor = ({ projectCount, activeProjectId }: TCursorProps) => {
   const circleSize = 42
   const radius = circleSize / 2
   const innerRadius = (circleSize - 2) / 2
   const processFragments = 2 * Math.PI * innerRadius
+
   const initialFragmentPosition =
-    projectCount && activeProjectId
-      ? processFragments -
-        (processFragments * (activeProjectId + 1)) / projectCount
-      : 0
+    processFragments - (processFragments * (activeProjectId + 1)) / projectCount
+
   useEffect(() => {
     window.addEventListener('mousemove', onMouseMove)
     return () => {
