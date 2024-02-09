@@ -8,9 +8,14 @@ export const Wrapper = styled.div`
   right: var(--p-sm);
   bottom: var(--p-sm);
 
-  ${DEVICE.tablet} {
+  ${DEVICE.mobileL} {
     bottom: 95px;
-    width: var(--thumbnail-width-md);
+    width: var(--thumbnail-width-m);
+  }
+
+  ${DEVICE.laptop} {
+    bottom: 95px;
+    width: var(--thumbnail-width-lg);
   }
 `
 export const InnerWrapper = styled.div`
@@ -28,7 +33,7 @@ export const DateWrapper = styled.div`
   text-align: right;
 `
 
-export const Cta = styled.button`
+export const Cta = styled.div`
   border-radius: 24px;
   background-color: var(--c-white);
   padding: var(--p-xs) var(--p-sm);

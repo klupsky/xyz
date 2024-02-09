@@ -90,6 +90,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  cursor: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,7 +130,7 @@ table {
 }
 
 button {
-  all: unset;
+  border: 0;
 }
 
 a {

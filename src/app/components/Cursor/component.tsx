@@ -15,8 +15,10 @@ const Cursor = ({ projectCount, activeProjectId }: TCursorProps) => {
   const innerRadius = (circleSize - 2) / 2
   const processFragments = 2 * Math.PI * innerRadius
   const initialFragmentPosition =
-    processFragments - (processFragments * (activeProjectId + 1)) / projectCount
-
+    projectCount && activeProjectId
+      ? processFragments -
+        (processFragments * (activeProjectId + 1)) / projectCount
+      : 0
   useEffect(() => {
     window.addEventListener('mousemove', onMouseMove)
     return () => {

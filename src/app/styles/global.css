@@ -9,17 +9,15 @@
   --thumbnail-height-sm: 115px;
   --thumbnail-width-sm: 86px;
 
-  --thumbnail-height-md: 330px;
-  --thumbnail-width-md: 248px;
+  --thumbnail-height-lg: 330px;
+  --thumbnail-width-lg: 248px;
 
-  --centerImage-width: 512px;
   --centerImage-height: 680px;
+  --centerImage-width: 512px;
 }
 
 body {
   font-family: 'Helvetica', sans-serif;
   background-color: var(--c-grey);
   color: var(--c-white);
-
-  cursor: none;
 }

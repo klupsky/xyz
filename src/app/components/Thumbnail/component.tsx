@@ -11,7 +11,11 @@ export default function Thumbnail({
   const { src, alt } = image
 
   return (
-    <Wrapper direction={direction} onClick={() => handleClick(direction)}>
+    <Wrapper
+      aria-label={direction}
+      direction={direction}
+      onClick={() => handleClick(direction)}
+    >
       <Image src={`/${src}.jpg`} alt={alt} sizes="50vw" fill={true} priority />
     </Wrapper>
   )

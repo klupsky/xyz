@@ -1,11 +1,11 @@
 import { TImage } from '../Slider/types'
 
 export type TThumbnailProps = {
-  direction: 'isPrev' | 'isNext'
+  direction: 'Previous' | 'Next'
   image: TImage
-  handleClick: (direction: 'isPrev' | 'isNext') => void
+  handleClick: (direction: 'Previous' | 'Next') => void
 }
 
 export type TWrapperProps = {
-  direction: 'isPrev' | 'isNext'
+  direction: 'Previous' | 'Next'
 }

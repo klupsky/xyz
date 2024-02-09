@@ -2,17 +2,17 @@ import { DEVICE } from '@/app/styles/base/breakpoints'
 import styled, { css } from 'styled-components'
 import { TWrapperProps } from './types'
 
-export const Wrapper = styled.div<TWrapperProps>`
+export const Wrapper = styled.button<TWrapperProps>`
   position: absolute;
   overflow: hidden;
   width: var(--thumbnail-width-sm);
   height: var(--thumbnail-height-sm);
   border-radius: 10px;
   border: 1px solid var(--c-black);
-  z-index: 2;
+  z-index: 0;
 
   ${(p) =>
-    p.direction == 'isPrev'
+    p.direction == 'Previous'
       ? css`
           bottom: var(--p-sm);
           left: var(--p-sm);
@@ -22,8 +22,8 @@ export const Wrapper = styled.div<TWrapperProps>`
           right: var(--p-sm);
         `};
 
-  ${DEVICE.tablet} {
-    width: var(--thumbnail-width-md);
-    height: var(--thumbnail-height-md);
+  ${DEVICE.laptopM} {
+    width: var(--thumbnail-width-lg);
+    height: var(--thumbnail-height-lg);
   }
 `
