@@ -5,8 +5,11 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   justify-content: center;
+  align-items: center;
 `
 
 export const BackgroundTitle = styled.h1`
@@ -56,7 +59,7 @@ export const FrontTitle = styled.h1`
 
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
-    left: 50.3%;
+    left: 50.6%;
     max-width: 860px;
   }
 `

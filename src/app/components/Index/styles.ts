@@ -1,3 +1,4 @@
+import { DEVICE } from '@/app/styles/base/breakpoints'
 import styled from 'styled-components'
 import { TIndexDotProps } from './types'
 
@@ -8,10 +9,14 @@ export const Wrapper = styled.div`
   color: var(--c-white);
   gap: 22px;
   position: absolute;
-  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
+  top: 90%;
+
+  ${DEVICE.tablet} {
+    top: 76%;
+  }
 `
 
 export const IndexDotsWrapper = styled.div`

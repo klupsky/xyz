@@ -33,12 +33,11 @@ export default function Slider({ data }: { data: TSliderData }) {
         <CenterImage
           title={projects[activeProjectId].title}
           image={projects[activeProjectId].image}
-        />
-        <Index
           projectId={projects[activeProjectId].id}
           activeProjectId={activeProjectId}
           projectCount={projectCount}
         />
+
         <InfoBox
           date={projects[activeProjectId].date}
           client={projects[activeProjectId].client}
@@ -57,7 +56,7 @@ export default function Slider({ data }: { data: TSliderData }) {
           handleClick={handleClick}
         />
         <DesktopCursorWrapper>
-          <Cursor />{' '}
+          <Cursor />
         </DesktopCursorWrapper>
       </Wrapper>
     </>
