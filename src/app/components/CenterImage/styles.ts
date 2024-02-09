@@ -40,8 +40,8 @@ export const ImageWrapper = styled.div`
   z-index: 3;
   border-radius: 10px;
   border: 1px solid var(--c-black);
-  height: var(--thumbnail-height-t);
-  width: var(--thumbnail-width-t);
+  height: var(--thumbnail-height-md);
+  width: var(--thumbnail-width-md);
 
   ${DEVICE.tablet} {
     height: var(--centerImage-height);

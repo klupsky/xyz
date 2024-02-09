@@ -4,13 +4,13 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   position: absolute;
-  width: var(--thumbnail-width-m);
+  width: var(--thumbnail-width-sm);
   right: var(--p-sm);
   bottom: var(--p-sm);
 
   ${DEVICE.tablet} {
     bottom: 95px;
-    width: var(--thumbnail-width-t);
+    width: var(--thumbnail-width-md);
   }
 `
 export const InnerWrapper = styled.div`

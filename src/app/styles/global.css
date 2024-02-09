@@ -6,11 +6,11 @@
   --p-xs: 8px;
   --p-sm: 16px;
 
-  --thumbnail-height-m: 115px;
-  --thumbnail-width-m: 86px;
+  --thumbnail-height-sm: 115px;
+  --thumbnail-width-sm: 86px;
 
-  --thumbnail-height-t: 330px;
-  --thumbnail-width-t: 248px;
+  --thumbnail-height-md: 330px;
+  --thumbnail-width-md: 248px;
 
   --centerImage-width: 512px;
   --centerImage-height: 680px;

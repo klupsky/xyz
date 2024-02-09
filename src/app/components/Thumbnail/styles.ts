@@ -5,8 +5,8 @@ import { TWrapperProps } from './types'
 export const Wrapper = styled.div<TWrapperProps>`
   position: absolute;
   overflow: hidden;
-  width: var(--thumbnail-width-m);
-  height: var(--thumbnail-height-m);
+  width: var(--thumbnail-width-sm);
+  height: var(--thumbnail-height-sm);
   border-radius: 10px;
   border: 1px solid var(--c-black);
   z-index: 2;
@@ -23,7 +23,7 @@ export const Wrapper = styled.div<TWrapperProps>`
         `};
 
   ${DEVICE.tablet} {
-    width: var(--thumbnail-width-t);
-    height: var(--thumbnail-height-t);
+    width: var(--thumbnail-width-md);
+    height: var(--thumbnail-height-md);
   }
 `
