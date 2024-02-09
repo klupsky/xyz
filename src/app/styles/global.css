@@ -9,8 +9,8 @@
   --thumbnail-height-m: 115px;
   --thumbnail-width-m: 86px;
 
-  --thumbnail-height: 330px;
-  --thumbnail-width: 248px;
+  --thumbnail-height-t: 330px;
+  --thumbnail-width-t: 248px;
 
   --centerImage-width: 512px;
   --centerImage-height: 680px;
@@ -20,5 +20,6 @@ body {
   font-family: 'Helvetica', sans-serif;
   background-color: var(--c-grey);
   color: var(--c-white);
-  /* cursor: none; */
+
+  cursor: none;
 }

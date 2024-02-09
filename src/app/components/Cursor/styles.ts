@@ -1,13 +1,18 @@
 import styled from 'styled-components'
 
-export const CircleCenter = styled.div`
+export const Position = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: var(--c-white);
-  z-index: 5;
-  height: 2px;
-  width: 2px;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  pointer-events: none;
+`
+
+export const CircleCenter = styled(Position)`
+  transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%));
+`
+
+export const CircleWrapper = styled(Position)`
+  transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%))
+    rotateZ(-90deg);
 `

@@ -23,7 +23,7 @@ export const Wrapper = styled.div<TWrapperProps>`
         `};
 
   ${DEVICE.tablet} {
-    width: var(--thumbnail-width);
-    height: var(--thumbnail-height);
+    width: var(--thumbnail-width-t);
+    height: var(--thumbnail-height-t);
   }
 `

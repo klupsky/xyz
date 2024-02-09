@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
   ${DEVICE.tablet} {
     bottom: 95px;
-    width: var(--thumbnail-width);
+    width: var(--thumbnail-width-t);
   }
 `
 export const InnerWrapper = styled.div`

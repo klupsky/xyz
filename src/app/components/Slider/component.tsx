@@ -56,7 +56,10 @@ export default function Slider({ data }: { data: TSliderData }) {
           handleClick={handleClick}
         />
         <DesktopCursorWrapper>
-          <Cursor />
+          <Cursor
+            activeProjectId={activeProjectId}
+            projectCount={projectCount}
+          />
         </DesktopCursorWrapper>
       </Wrapper>
     </>

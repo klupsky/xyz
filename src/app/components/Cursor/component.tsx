@@ -1,85 +1,67 @@
-import { motion } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { CircleCenter, CircleWrapper } from './styles'
+import { TCursorProps } from './types'
 
-const CleanPercentage = (percentage) => {
-  const isNegativeOrNaN = !Number.isFinite(+percentage) || percentage < 0
-  const isTooHigh = percentage > 100
-  return isNegativeOrNaN ? 0 : isTooHigh ? 100 : +percentage
+const onMouseMove = (e: MouseEvent) => {
+  const mouseY = e.clientY
+  const mouseX = e.clientX
+  document.body.style.setProperty('--x', `${mouseX}px`)
+  document.body.style.setProperty('--y', `${mouseY}px`)
 }
 
-const Circle = ({ percentage, colour }) => {
-  const r = 21
-  const dotRadius = 2
-  const circ = 2 * Math.PI * r
-  const strokePct = ((100 - percentage) * circ) / 100
-
-  return (
-    <g>
-      <circle
-        r={r}
-        cx={21}
-        cy={21}
-        fill="transparent"
-        stroke={colour === 'var(--c-white)' ? '' : 'black'}
-        strokeWidth="1px"
-        strokeDasharray={colour === 'var(--c-white)' ? circ : strokePct}
-        strokeDashoffset={colour === 'var(--c-white)' ? 0 : 0}
-        opacity="0.9"
-      ></circle>
-      <circle r={dotRadius} cx={21} cy={21} fill="white"></circle>
-    </g>
-  )
-}
-
-const Pie = ({ percentage }) => {
-  const pct = CleanPercentage(percentage)
-
-  return (
-    <svg width={43} height={43}>
-      <g transform={`rotate(-90 ${'21 21'})`}>
-        <Circle colour="black" percentage={pct} />
-        <Circle colour="var(--c-white)" percentage={pct} />
-      </g>
-    </svg>
-  )
-}
-
-const Cursor = () => {
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  })
+const Cursor = ({ projectCount, activeProjectId }: TCursorProps) => {
+  const circleSize = 42
+  const radius = circleSize / 2
+  const innerRadius = (circleSize - 2) / 2
+  const processFragments = 2 * Math.PI * innerRadius
+  const initialFragmentPosition =
+    processFragments - (processFragments * (activeProjectId + 1)) / projectCount
 
   useEffect(() => {
-    const mouseMove = (e) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      })
-    }
-
-    window.addEventListener('mousemove', mouseMove)
-
+    window.addEventListener('mousemove', onMouseMove)
     return () => {
-      window.removeEventListener('mousemove', mouseMove)
+      window.removeEventListener('mousemove', onMouseMove)
     }
   }, [])
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 21,
-      y: mousePosition.y - 21,
-    },
-  }
-
   return (
-    <motion.div
-      variants={variants}
-      animate="default"
-      style={{ zIndex: 5, position: 'absolute', pointerEvents: 'none' }}
-    >
-      <Pie percentage={50} />
-    </motion.div>
+    <>
+      <CircleCenter>
+        <svg
+          fill="none"
+          width={circleSize}
+          height={circleSize}
+          viewBox={`0 0 ${circleSize} ${circleSize}`}
+        >
+          <circle fill="var(--c-white)" cx={radius} cy={radius} r={2} />
+        </svg>
+      </CircleCenter>
+      <CircleWrapper>
+        <svg
+          fill="none"
+          width={circleSize}
+          height={circleSize}
+          viewBox={`0 0 ${circleSize} ${circleSize}`}
+        >
+          <circle
+            cx={radius}
+            cy={radius}
+            r={innerRadius}
+            stroke="var(--c-white)"
+            opacity="0.1"
+          />
+          <circle
+            cx={radius}
+            cy={radius}
+            r={innerRadius}
+            stroke="var(--c-white)"
+            strokeDasharray={processFragments}
+            strokeDashoffset={initialFragmentPosition}
+            style={{ transition: 'all 0.3s ease-in-out' }}
+          />
+        </svg>
+      </CircleWrapper>
+    </>
   )
 }
 
