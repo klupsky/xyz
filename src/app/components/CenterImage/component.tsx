@@ -1,10 +1,17 @@
 'use client'
 import { SIZE } from '@/app/styles/base/breakpoints'
 import Image from 'next/image'
+import Index from '../Index/component'
 import { BackgroundTitle, FrontTitle, ImageWrapper, Wrapper } from './styles'
 import { TCenterImageProps } from './types'
 
-export default function CenterImage({ image, title }: TCenterImageProps) {
+export default function CenterImage({
+  image,
+  title,
+  projectId,
+  activeProjectId,
+  projectCount,
+}: TCenterImageProps) {
   const { src, alt } = image
 
   return (
@@ -21,6 +28,12 @@ export default function CenterImage({ image, title }: TCenterImageProps) {
           priority
         />
         <FrontTitle>{title}</FrontTitle>
+
+        <Index
+          projectId={projectId}
+          activeProjectId={activeProjectId}
+          projectCount={projectCount}
+        />
       </ImageWrapper>
     </Wrapper>
   )
