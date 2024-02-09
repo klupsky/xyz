@@ -24,7 +24,7 @@ export default function InfoBox({
         </CreditWrapper>
         <DateWrapper>{date}</DateWrapper>
         <Link href={`/${slug}`}>
-          <Cta>{cta}</Cta>
+          <Cta aria-label="Have a look">{cta}</Cta>
         </Link>
       </InnerWrapper>
     </Wrapper>

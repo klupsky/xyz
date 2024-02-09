@@ -20,4 +20,5 @@ body {
   font-family: 'Helvetica', sans-serif;
   background-color: var(--c-grey);
   color: var(--c-white);
+  /* cursor: none; */
 }
