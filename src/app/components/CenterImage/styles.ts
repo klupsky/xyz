@@ -56,7 +56,7 @@ export const FrontTitle = styled.h1`
 
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
-    left: 50.3%;
+    left: 50.6%;
     max-width: 860px;
   }
 `
