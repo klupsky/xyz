@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { CircleCenter, CircleWrapper } from './styles'
+import { CircleCenter, CircleWrapper, Wrapper } from './styles'
 import { TCursorProps } from './types'
 
 const onMouseMove = (e: MouseEvent) => {
@@ -25,7 +25,7 @@ const Cursor = ({ projectCount, activeProjectId }: TCursorProps) => {
   }, [])
 
   return (
-    <>
+    <Wrapper>
       <CircleCenter>
         <svg
           fill="none"
@@ -61,7 +61,7 @@ const Cursor = ({ projectCount, activeProjectId }: TCursorProps) => {
           />
         </svg>
       </CircleWrapper>
-    </>
+    </Wrapper>
   )
 }
 

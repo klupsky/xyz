@@ -1,4 +1,13 @@
+import { DEVICE } from '@/app/styles/base/breakpoints'
 import styled from 'styled-components'
+
+export const Wrapper = styled.div`
+  display: none;
+
+  ${DEVICE.tablet} {
+    display: block;
+  }
+`
 
 export const Position = styled.div`
   position: absolute;
