@@ -20,7 +20,7 @@ export default function Project({ params }: TProjectProps) {
   if (!projectImage) {
     return (
       <>
-        <Cursor />
+        <Cursor activeProjectId={0} projectCount={0} />
         <Link aria-label="Back to homepage" href="/">
           <ErrorWrapper>
             <ErrorTitle>xyz photographers</ErrorTitle>
@@ -37,7 +37,7 @@ export default function Project({ params }: TProjectProps) {
 
   return (
     <Wrapper>
-      <Cursor />
+      <Cursor activeProjectId={0} projectCount={0} />
       <Link href="/" aria-label="Back to homepage">
         <Background image={projectImage} />
         <ImageWrapper>
