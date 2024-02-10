@@ -1,4 +1,5 @@
 'use client'
+import useSwipe from '@/app/lib/hooks/useSwipe'
 import { useEffect, useState } from 'react'
 import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
@@ -24,6 +25,15 @@ export default function Slider({ data }: { data: TSliderData }) {
     setActiveProjectId(direction === 'Previous' ? prevProjectId : nextProjectId)
   }
 
+  const handleSwipe = useSwipe({
+    onSwipedLeft: () => {
+      setActiveProjectId(prevProjectId)
+    },
+    onSwipedRight: () => {
+      setActiveProjectId(nextProjectId)
+    },
+  })
+
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
@@ -42,7 +52,7 @@ export default function Slider({ data }: { data: TSliderData }) {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper {...handleSwipe}>
         <Background image={projects[activeProjectId].image} />
         <Title>{title}</Title>
         <CenterImage
