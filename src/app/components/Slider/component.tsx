@@ -1,5 +1,6 @@
 'use client'
 import useSwipe from '@/app/lib/hooks/useSwipe'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
@@ -55,13 +56,22 @@ export default function Slider({ data }: { data: TSliderData }) {
       <Wrapper {...handleSwipe}>
         <Background image={projects[activeProjectId].image} />
         <Title>{title}</Title>
-        <CenterImage
-          title={projects[activeProjectId].title}
-          image={projects[activeProjectId].image}
-          projectId={projects[activeProjectId].id}
-          activeProjectId={activeProjectId}
-          projectCount={projectCount}
-        />
+        <AnimatePresence>
+          <motion.div
+            key={projects[activeProjectId].image.src}
+            initial="enter"
+            animate="center"
+            exit="exit"
+          >
+            <CenterImage
+              title={projects[activeProjectId].title}
+              image={projects[activeProjectId].image}
+              projectId={projects[activeProjectId].id}
+              activeProjectId={activeProjectId}
+              projectCount={projectCount}
+            />
+          </motion.div>
+        </AnimatePresence>
         <InfoBox
           date={projects[activeProjectId].date}
           client={projects[activeProjectId].client}
@@ -69,16 +79,34 @@ export default function Slider({ data }: { data: TSliderData }) {
           slug={projects[activeProjectId].slug}
           cta={projects[activeProjectId].cta}
         />
-        <Thumbnail
-          direction="Next"
-          image={projects[nextProjectId].image}
-          handleClick={handleClick}
-        />
-        <Thumbnail
-          direction="Previous"
-          image={projects[prevProjectId].image}
-          handleClick={handleClick}
-        />
+        <AnimatePresence>
+          <motion.div
+            key={`${projects[nextProjectId]}`}
+            initial="enter"
+            animate="center"
+            exit="exit"
+          >
+            <Thumbnail
+              direction="Next"
+              image={projects[nextProjectId].image}
+              handleClick={handleClick}
+            />
+          </motion.div>
+        </AnimatePresence>
+        <AnimatePresence>
+          <motion.div
+            key={`${projects[prevProjectId]}`}
+            initial="enter"
+            animate="center"
+            exit="exit"
+          >
+            <Thumbnail
+              direction="Previous"
+              image={projects[prevProjectId].image}
+              handleClick={handleClick}
+            />
+          </motion.div>
+        </AnimatePresence>
         <Cursor activeProjectId={activeProjectId} projectCount={projectCount} />
       </Wrapper>
     </>
