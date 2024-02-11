@@ -1,10 +1,47 @@
 'use client'
 import { SIZE } from '@/app/styles/base/breakpoints'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Index from '../Index/component'
-import { BackgroundTitle, FrontTitle, ImageWrapper, Wrapper } from './styles'
+import {
+  BackgroundTitle,
+  FrontTitle,
+  ImageWrapper,
+  TopTitle,
+  Wrapper,
+} from './styles'
 import { TCenterImageProps } from './types'
+
+const ImageVariants = {
+  enter: {
+    y: -100,
+    opacity: 0,
+  },
+  center: {
+    zIndex: 1,
+    y: 0,
+    opacity: 1,
+  },
+  exit: {
+    y: 100,
+    opacity: 0,
+  },
+}
+const TitleVariants = {
+  enter: {
+    y: 100,
+    opacity: 0,
+  },
+  center: {
+    zIndex: 1,
+    y: 0,
+    opacity: 1,
+  },
+  exit: {
+    y: -100,
+    opacity: 0,
+  },
+}
 
 export default function CenterImage({
   image,
@@ -17,9 +54,9 @@ export default function CenterImage({
 
   return (
     <Wrapper>
-      <BackgroundTitle>{title}</BackgroundTitle>
+      <BackgroundTitle variants={TitleVariants}>{title}</BackgroundTitle>
 
-      <ImageWrapper>
+      <ImageWrapper variants={ImageVariants}>
         <Image
           src={`/${src}.jpg`}
           alt={alt}
@@ -28,14 +65,17 @@ export default function CenterImage({
           fill={true}
           priority
         />
-        <FrontTitle>{title}</FrontTitle>
 
+        <FrontTitle>{title}</FrontTitle>
+      </ImageWrapper>
+      <TopTitle variants={TitleVariants}>
+        <FrontTitle>{title}</FrontTitle>
         <Index
           projectId={projectId}
           activeProjectId={activeProjectId}
           projectCount={projectCount}
         />
-      </ImageWrapper>
+      </TopTitle>
     </Wrapper>
   )
 }

@@ -10,7 +10,7 @@ export const Wrapper = styled(motion.button)<TWrapperProps>`
   height: var(--thumbnail-height-sm);
   border-radius: 10px;
   border: 1px solid var(--c-black);
-  z-index: 0;
+  z-index: 2;
 
   ${(p) =>
     p.direction == 'Previous'

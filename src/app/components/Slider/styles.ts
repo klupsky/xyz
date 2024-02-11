@@ -18,14 +18,13 @@ export const Wrapper = styled.div`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   ${HELVETICA.style};
-  z-index: 1;
 `
 
 export const Title = styled.h2`
   position: absolute;
   top: var(--p-sm);
   left: var(--p-sm);
-  z-index: 1;
+
   ${TUNGSTEN.style}
   font-size: 16px;
   line-height: 1;

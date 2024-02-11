@@ -1,5 +1,6 @@
 import { DEVICE } from '@/app/styles/base/breakpoints'
 import { TUNGSTEN } from '@/app/styles/base/fonts'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -12,11 +13,8 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 
-export const BackgroundTitle = styled.h1`
+export const BackgroundTitle = styled(motion.h1)`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
   width: 11ch;
   max-width: calc(100vw - 2 * var(--p-sm));
@@ -24,19 +22,14 @@ export const BackgroundTitle = styled.h1`
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
     max-width: 860px;
-    left: 50.3%;
   }
   color: transparent;
   -webkit-text-stroke: 1px var(--c-white);
 `
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled(motion.div)`
   overflow: hidden;
-  position: relative;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 3;
   border-radius: 10px;
   border: 1px solid var(--c-black);
@@ -49,6 +42,11 @@ export const ImageWrapper = styled.div`
   }
 `
 
+export const TopTitle = styled(ImageWrapper)`
+  z-index: 4;
+  border: none;
+`
+
 export const FrontTitle = styled.h1`
   position: absolute;
   top: 50%;
@@ -59,7 +57,7 @@ export const FrontTitle = styled.h1`
 
   ${TUNGSTEN.style}
   ${DEVICE.tablet} {
-    left: 50.6%;
+    left: 50.4%;
     max-width: 860px;
   }
 `
