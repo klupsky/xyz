@@ -1,5 +1,6 @@
 import { DEVICE } from '@/app/styles/base/breakpoints'
 import { HELVETICA } from '@/app/styles/base/fonts'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -33,7 +34,7 @@ export const DateWrapper = styled.div`
   text-align: right;
 `
 
-export const Cta = styled.div`
+export const Cta = styled(motion.button)`
   border-radius: 24px;
   background-color: var(--c-white);
   padding: var(--p-xs) var(--p-sm);

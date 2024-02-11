@@ -1,8 +1,9 @@
 import { DEVICE } from '@/app/styles/base/breakpoints'
+import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import { TWrapperProps } from './types'
 
-export const Wrapper = styled.button<TWrapperProps>`
+export const Wrapper = styled(motion.button)<TWrapperProps>`
   position: absolute;
   overflow: hidden;
   width: var(--thumbnail-width-sm);

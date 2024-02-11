@@ -1,5 +1,6 @@
 'use client'
 import { SIZE } from '@/app/styles/base/breakpoints'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Index from '../Index/component'
 import { BackgroundTitle, FrontTitle, ImageWrapper, Wrapper } from './styles'

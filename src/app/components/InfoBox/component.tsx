@@ -24,7 +24,13 @@ export default function InfoBox({
         </CreditWrapper>
         <DateWrapper>{date}</DateWrapper>
         <Link href={`/${slug}`}>
-          <Cta aria-label="Have a look">{cta}</Cta>
+          <Cta
+            whileHover={{ scale: 1.15 }}
+            whileFocus={{ scale: 1.15 }}
+            aria-label="Have a look"
+          >
+            {cta}
+          </Cta>
         </Link>
       </InnerWrapper>
     </Wrapper>
