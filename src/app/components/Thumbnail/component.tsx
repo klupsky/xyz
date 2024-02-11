@@ -1,8 +1,7 @@
 'use client'
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Wrapper } from './styles';
-import { TThumbnailProps } from './types';
+import { motion } from 'framer-motion'
+import { ImageWrapper, Wrapper } from './styles'
+import { TThumbnailProps } from './types'
 
 export default function Thumbnail({
   image,
@@ -17,15 +16,14 @@ export default function Thumbnail({
         aria-label={direction}
         direction={direction}
         onClick={() => handleClick(direction)}
-        // whileHover={{ scale: 1.05 }}
-        // whileFocus={{ scale: 1.05 }}
       >
-        <Image
+        <ImageWrapper
           src={`/${src}.jpg`}
           alt={alt}
-          sizes="50vw"
-          fill={true}
-          priority
+          // sizes="50vw"
+          // fill={true}
+          as={motion.img}
+          whileHover={{ scale: 1.1 }}
         />
       </Wrapper>
     </>

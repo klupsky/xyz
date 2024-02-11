@@ -18,7 +18,6 @@ const ImageVariants = {
     opacity: 0,
   },
   center: {
-    zIndex: 1,
     y: 0,
     opacity: 1,
   },
@@ -33,7 +32,6 @@ const TitleVariants = {
     opacity: 0,
   },
   center: {
-    zIndex: 1,
     y: 0,
     opacity: 1,
   },
@@ -54,28 +52,37 @@ export default function CenterImage({
 
   return (
     <Wrapper>
-      <BackgroundTitle variants={TitleVariants}>{title}</BackgroundTitle>
+      <AnimatePresence>
+        <BackgroundTitle
+          transition={{ duration: 0.5 }}
+          variants={TitleVariants}
+        >
+          {title}
+        </BackgroundTitle>
 
-      <ImageWrapper variants={ImageVariants}>
-        <Image
-          src={`/${src}.jpg`}
-          alt={alt}
-          sizes={`(min-width: ${SIZE.tablet}px) 100vw,
+        <ImageWrapper
+          whileHover="whileHover"
+          transition={{ duration: 0.5 }}
+          variants={ImageVariants}
+        >
+          <Image
+            src={`/${src}.jpg`}
+            alt={alt}
+            sizes={`(min-width: ${SIZE.tablet}px) 100vw,
           80vw`}
-          fill={true}
-          priority
-        />
-
-        <FrontTitle>{title}</FrontTitle>
-      </ImageWrapper>
-      <TopTitle variants={TitleVariants}>
-        <FrontTitle>{title}</FrontTitle>
-        <Index
-          projectId={projectId}
-          activeProjectId={activeProjectId}
-          projectCount={projectCount}
-        />
-      </TopTitle>
+            fill={true}
+            priority
+          />
+        </ImageWrapper>
+        <TopTitle transition={{ duration: 0.5 }} variants={TitleVariants}>
+          <FrontTitle>{title}</FrontTitle>
+          <Index
+            projectId={projectId}
+            activeProjectId={activeProjectId}
+            projectCount={projectCount}
+          />
+        </TopTitle>
+      </AnimatePresence>
     </Wrapper>
   )
 }

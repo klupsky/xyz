@@ -54,8 +54,6 @@ export default function Slider({ data }: { data: TSliderData }) {
   return (
     <>
       <Wrapper {...handleSwipe}>
-        <Background image={projects[activeProjectId].image} />
-        <Title>{title}</Title>
         <AnimatePresence>
           <motion.div
             key={projects[activeProjectId].image.src}
@@ -63,6 +61,8 @@ export default function Slider({ data }: { data: TSliderData }) {
             animate="center"
             exit="exit"
           >
+            <Background image={projects[activeProjectId].image} />
+            <Title>{title}</Title>
             <CenterImage
               title={projects[activeProjectId].title}
               image={projects[activeProjectId].image}

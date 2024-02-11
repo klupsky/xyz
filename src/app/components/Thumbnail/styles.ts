@@ -11,6 +11,7 @@ export const Wrapper = styled(motion.button)<TWrapperProps>`
   border-radius: 10px;
   border: 1px solid var(--c-black);
   z-index: 2;
+  padding: 0;
 
   ${(p) =>
     p.direction == 'Previous'
@@ -27,4 +28,11 @@ export const Wrapper = styled(motion.button)<TWrapperProps>`
     width: var(--thumbnail-width-lg);
     height: var(--thumbnail-height-lg);
   }
+`
+
+export const ImageWrapper = styled.img`
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  object-fit: cover;
 `
