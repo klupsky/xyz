@@ -9,7 +9,12 @@ import {
 } from './styles'
 import { TInfoBoxProps } from './types'
 
-export default function InfoBox({ date, client, artist, slug }: TInfoBoxProps) {
+export default function InfoBox({
+  date,
+  client,
+  artist,
+  toggleProjectOpen,
+}: TInfoBoxProps) {
   return (
     <Wrapper>
       <InnerWrapper>
@@ -18,16 +23,15 @@ export default function InfoBox({ date, client, artist, slug }: TInfoBoxProps) {
           <p>{client}</p>
         </CreditWrapper>
         <DateWrapper>{date}</DateWrapper>
-        <Link href={`/${slug}`}>
-          <Cta
-            whileHover={HoverTapFocusVariants.hover}
-            whileTap={HoverTapFocusVariants.tap}
-            whileFocus={HoverTapFocusVariants.focus}
-            aria-label="Have a look"
-          >
-            Have a look
-          </Cta>
-        </Link>
+        <Cta
+          whileHover={HoverTapFocusVariants.hover}
+          whileTap={HoverTapFocusVariants.tap}
+          whileFocus={HoverTapFocusVariants.focus}
+          aria-label="Have a look"
+          onClick={toggleProjectOpen}
+        >
+          Have a look
+        </Cta>
       </InnerWrapper>
     </Wrapper>
   )

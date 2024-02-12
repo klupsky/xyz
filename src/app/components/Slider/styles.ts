@@ -34,3 +34,25 @@ export const Title = styled.h2`
     line-height: 1;
   }
 `
+
+const LoadingCircle = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: var(--c-white);
+  border-radius: 50%;
+  border: 2px solid var(--c-primary);
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`

@@ -1,10 +1,10 @@
 'use client'
 
-import data from '@/app/lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import Background from '../components/Background/component'
 import Cursor from '../components/Cursor/component'
+import data from '../lib/data'
 import {
   ErrorMessage,
   ErrorTitle,

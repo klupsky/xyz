@@ -13,6 +13,9 @@ import { TSliderData } from './types'
 export default function Slider({ data }: { data: TSliderData }) {
   const { projects, title } = data
   const [activeProjectId, setActiveProjectId] = useState(0)
+  const [projectOpen, setProjectOpen] = useState(false)
+
+  console.log(projectOpen)
 
   const projectCount = projects.length
 
@@ -34,6 +37,10 @@ export default function Slider({ data }: { data: TSliderData }) {
       setActiveProjectId(nextProjectId)
     },
   })
+
+  const toggleProjectOpen = () => {
+    setProjectOpen((prevProjectOpen) => !prevProjectOpen)
+  }
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -76,7 +83,7 @@ export default function Slider({ data }: { data: TSliderData }) {
           date={projects[activeProjectId].date}
           client={projects[activeProjectId].client}
           artist={projects[activeProjectId].artist}
-          slug={projects[activeProjectId].slug}
+          toggleProjectOpen={toggleProjectOpen}
         />
         <AnimatePresence>
           <motion.div

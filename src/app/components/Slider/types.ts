@@ -10,7 +10,6 @@ export type TProject = {
   artist: string
   client: string
   date: string
-  slug: string
 }
 
 export type TSliderData = {
