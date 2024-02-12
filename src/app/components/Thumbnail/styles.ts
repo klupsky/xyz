@@ -30,7 +30,7 @@ export const Wrapper = styled(motion.button)<TWrapperProps>`
   }
 `
 
-export const ImageWrapper = styled.img`
+export const ImageWrapper = styled(motion.img)`
   overflow: hidden;
   position: relative;
   height: 100%;

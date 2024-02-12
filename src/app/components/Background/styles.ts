@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -8,11 +9,13 @@ export const Wrapper = styled.div`
   right: 0;
   width: 100vw;
   height: 100%;
+`
 
-  img {
-    filter: blur(50px);
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+export const ImageWrapper = styled(motion.img)`
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(50px);
+  width: 100%;
 `

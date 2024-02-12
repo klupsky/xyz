@@ -9,13 +9,7 @@ import {
 } from './styles'
 import { TInfoBoxProps } from './types'
 
-export default function InfoBox({
-  date,
-  client,
-  artist,
-  slug,
-  cta,
-}: TInfoBoxProps) {
+export default function InfoBox({ date, client, artist, slug }: TInfoBoxProps) {
   return (
     <Wrapper>
       <InnerWrapper>

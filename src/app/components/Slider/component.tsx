@@ -58,7 +58,7 @@ export default function Slider({ data }: { data: TSliderData }) {
           <motion.div
             key={projects[activeProjectId].image.src}
             initial="enter"
-            animate="center"
+            animate="initial"
             exit="exit"
           >
             <Background image={projects[activeProjectId].image} />
@@ -77,13 +77,12 @@ export default function Slider({ data }: { data: TSliderData }) {
           client={projects[activeProjectId].client}
           artist={projects[activeProjectId].artist}
           slug={projects[activeProjectId].slug}
-          cta={projects[activeProjectId].cta}
         />
         <AnimatePresence>
           <motion.div
             key={`${projects[nextProjectId]}`}
             initial="enter"
-            animate="center"
+            animate="initial"
             exit="exit"
           >
             <Thumbnail
@@ -97,7 +96,7 @@ export default function Slider({ data }: { data: TSliderData }) {
           <motion.div
             key={`${projects[prevProjectId]}`}
             initial="enter"
-            animate="center"
+            animate="initial"
             exit="exit"
           >
             <Thumbnail

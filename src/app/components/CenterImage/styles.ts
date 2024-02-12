@@ -42,7 +42,7 @@ export const ImageOuterWrapper = styled(motion.div)`
   }
 `
 
-export const ImageWrapper = styled.img`
+export const ImageWrapper = styled(motion.img)`
   overflow: hidden;
   position: relative;
   height: 100%;

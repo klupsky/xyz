@@ -1,7 +1,7 @@
 'use client'
 import {
+  CenterImageVariants,
   HoverTapFocusVariants,
-  ImageVariants,
   TitleVariants,
 } from '@/app/lib/animations'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -28,27 +28,17 @@ export default function CenterImage({
   return (
     <Wrapper>
       <AnimatePresence>
-        <BackgroundTitle
-          transition={{ duration: 0.5 }}
-          variants={TitleVariants}
-        >
-          {title}
-        </BackgroundTitle>
-
-        <ImageOuterWrapper
-          transition={{ duration: 0.5 }}
-          variants={ImageVariants}
-        >
+        <BackgroundTitle variants={TitleVariants}>{title}</BackgroundTitle>
+        <ImageOuterWrapper variants={CenterImageVariants}>
           <ImageWrapper
             src={`/${src}.jpg`}
             alt={alt}
-            as={motion.img}
             whileHover={HoverTapFocusVariants.hover}
             whileTap={HoverTapFocusVariants.tap}
             whileFocus={HoverTapFocusVariants.focus}
           />
         </ImageOuterWrapper>
-        <TopTitle transition={{ duration: 0.5 }} variants={TitleVariants}>
+        <TopTitle variants={TitleVariants}>
           <FrontTitle>{title}</FrontTitle>
           <Index
             projectId={projectId}
