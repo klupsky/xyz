@@ -86,20 +86,20 @@ export const OpacityVariants = {
   visible: {
     opacity: 1,
     transition: {
-      opacity: { duration: 0.1, ease: 'easeInOut', delay: 0.3 },
-      delay: 3,
+      duration: 0.3,
+      delay: 0.5,
     },
   },
   transparent: {
     opacity: 0.3,
     transition: {
-      opacity: { duration: 0.3, ease: 'easeInOut' },
+      duration: 0.3,
     },
   },
   hidden: {
     opacity: 0,
     transition: {
-      opacity: { duration: 0.3, ease: 'easeInOut' },
+      duration: 0.3,
     },
   },
 }
@@ -109,14 +109,14 @@ export const SizeVariants = {
     height: 'var(--centerImage-height)',
     width: 'var(--centerImage-width)',
     transition: {
-      opacity: { duration: 0.5, ease: 'easeInOut' },
+      duration: 0.5,
     },
   },
   sizeUp: {
     height: `var(--centerImage-height--open)`,
     width: 'auto',
     transition: {
-      opacity: { duration: 0.5, ease: 'easeInOut' },
+      duration: 0.5,
       delay: 0.3,
     },
   },

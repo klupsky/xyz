@@ -33,6 +33,14 @@ export const ImageOuterWrapper = styled(motion.div)`
   z-index: 3;
   border-radius: 10px;
   border: 1px solid var(--c-black);
+  height: var(--centerImage-height);
+  width: var(--centerImage-width);
+`
+
+export const TopTitle = styled(ImageOuterWrapper)`
+  z-index: 4;
+  border: none;
+  pointer-events: none;
 `
 
 export const ImageWrapper = styled(motion.img)`
@@ -40,14 +48,6 @@ export const ImageWrapper = styled(motion.img)`
   position: relative;
   height: 100%;
   object-fit: cover;
-`
-
-export const TopTitle = styled(ImageOuterWrapper)`
-  z-index: 4;
-  border: none;
-  height: var(--centerImage-height);
-  width: var(--centerImage-width);
-  pointer-events: none;
 `
 
 export const FrontTitle = styled(motion.h1)`
