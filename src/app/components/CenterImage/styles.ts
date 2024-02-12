@@ -1,7 +1,7 @@
-import { DEVICE } from '@/app/styles/base/breakpoints'
-import { TUNGSTEN } from '@/app/styles/base/fonts'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { DEVICE } from '../../styles/base/breakpoints'
+import { TUNGSTEN } from '../../styles/base/fonts'
 
 export const Wrapper = styled.div`
   display: flex;

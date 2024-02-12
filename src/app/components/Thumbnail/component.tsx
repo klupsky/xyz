@@ -1,5 +1,9 @@
 'use client'
-import { HoverTapFocusVariants } from '@/app/lib/animations'
+
+import {
+  HoverTapFocusVariants,
+  OpenProjectVariants,
+} from '../../lib/animations'
 import { ImageWrapper, Wrapper } from './styles'
 import { TThumbnailProps } from './types'
 
@@ -7,6 +11,7 @@ export default function Thumbnail({
   image,
   direction,
   handleClick,
+  projectOpen,
 }: TThumbnailProps) {
   const { src, alt } = image
 
@@ -23,6 +28,11 @@ export default function Thumbnail({
           whileHover={HoverTapFocusVariants.hover}
           whileTap={HoverTapFocusVariants.tap}
           whileFocus={HoverTapFocusVariants.focus}
+          variants={
+            projectOpen
+              ? OpenProjectVariants.projectOpen
+              : OpenProjectVariants.projectClosed
+          }
         />
       </Wrapper>
     </>

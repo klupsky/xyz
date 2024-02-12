@@ -1,5 +1,5 @@
-import { DEVICE } from '@/app/styles/base/breakpoints'
 import styled from 'styled-components'
+import { DEVICE } from '../../styles/base/breakpoints'
 
 export const Wrapper = styled.div`
   display: none;

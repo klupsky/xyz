@@ -1,7 +1,7 @@
 'use client'
-import useSwipe from '@/app/lib/hooks/useSwipe'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import useSwipe from '../../lib/hooks/useSwipe'
 import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
 import Cursor from '../Cursor/component'
@@ -14,8 +14,6 @@ export default function Slider({ data }: { data: TSliderData }) {
   const { projects, title } = data
   const [activeProjectId, setActiveProjectId] = useState(0)
   const [projectOpen, setProjectOpen] = useState(false)
-
-  console.log(projectOpen)
 
   const projectCount = projects.length
 
@@ -76,6 +74,7 @@ export default function Slider({ data }: { data: TSliderData }) {
               projectId={projects[activeProjectId].id}
               activeProjectId={activeProjectId}
               projectCount={projectCount}
+              projectOpen={projectOpen}
             />
           </motion.div>
         </AnimatePresence>
@@ -84,6 +83,7 @@ export default function Slider({ data }: { data: TSliderData }) {
           client={projects[activeProjectId].client}
           artist={projects[activeProjectId].artist}
           toggleProjectOpen={toggleProjectOpen}
+          projectOpen={projectOpen}
         />
         <AnimatePresence>
           <motion.div
@@ -96,6 +96,7 @@ export default function Slider({ data }: { data: TSliderData }) {
               direction="Next"
               image={projects[nextProjectId].image}
               handleClick={handleClick}
+              projectOpen={projectOpen}
             />
           </motion.div>
         </AnimatePresence>

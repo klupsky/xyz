@@ -1,6 +1,6 @@
-import { DEVICE } from '@/app/styles/base/breakpoints'
 import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
+import { DEVICE } from '../../styles/base/breakpoints'
 import { TWrapperProps } from './types'
 
 export const Wrapper = styled(motion.button)<TWrapperProps>`

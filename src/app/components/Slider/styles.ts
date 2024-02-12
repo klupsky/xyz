@@ -1,6 +1,6 @@
-import { DEVICE } from '@/app/styles/base/breakpoints'
-import { HELVETICA, TUNGSTEN } from '@/app/styles/base/fonts'
 import styled from 'styled-components'
+import { DEVICE } from '../../styles/base/breakpoints'
+import { HELVETICA, TUNGSTEN } from '../../styles/base/fonts'
 
 export const DesktopCursorWrapper = styled.div`
   display: none;

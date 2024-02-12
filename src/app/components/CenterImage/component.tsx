@@ -1,10 +1,11 @@
 'use client'
+
+import { AnimatePresence } from 'framer-motion'
 import {
   CenterImageVariants,
   HoverTapFocusVariants,
   TitleVariants,
-} from '@/app/lib/animations'
-import { AnimatePresence, motion } from 'framer-motion'
+} from '../../lib/animations'
 import Index from '../Index/component'
 import {
   BackgroundTitle,

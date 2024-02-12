@@ -1,6 +1,5 @@
-import { DEVICE } from '@/app/styles/base/breakpoints'
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { DEVICE } from '../../styles/base/breakpoints'
 import { TIndexDotProps } from './types'
 
 export const Wrapper = styled.div`

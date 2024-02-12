@@ -81,3 +81,18 @@ export const HoverTapFocusVariants = {
   tap: { scale: 1.1 },
   focus: { scale: 1.1 },
 }
+
+export const OpenProjectVariants = {
+  projectOpen: {
+    opacity: 0.1,
+    transition: {
+      opacity: { duration: 0.5, ease: 'easeInOut' },
+    },
+  },
+  projectClosed: {
+    opacity: 1,
+    transition: {
+      opacity: { duration: 0.5, ease: 'easeInOut' },
+    },
+  },
+}

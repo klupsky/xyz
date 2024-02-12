@@ -1,7 +1,7 @@
-import { DEVICE } from '@/app/styles/base/breakpoints'
-import { HELVETICA } from '@/app/styles/base/fonts'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import { DEVICE } from '../../styles/base/breakpoints'
+import { HELVETICA } from '../../styles/base/fonts'
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -23,7 +23,7 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--p-sm);
-  width: fit-content;
+  width: 107px;
 `
 
 export const CreditWrapper = styled.div`
@@ -44,4 +44,5 @@ export const Cta = styled(motion.button)`
   color: var(--c-black);
   letter-spacing: 0.08em;
   text-align: center;
+  width: 100%;
 `

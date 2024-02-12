@@ -1,5 +1,5 @@
 'use client'
-import { ImageVariants } from '@/app/lib/animations'
+import { ImageVariants } from '../../lib/animations'
 import { ImageWrapper, Wrapper } from './styles'
 import { TBackgroundProps } from './types'
 

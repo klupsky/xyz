@@ -1,5 +1,4 @@
-import { HoverTapFocusVariants } from '@/app/lib/animations'
-import Link from 'next/link'
+import { HoverTapFocusVariants } from '../../lib/animations'
 import {
   CreditWrapper,
   Cta,
@@ -14,6 +13,7 @@ export default function InfoBox({
   client,
   artist,
   toggleProjectOpen,
+  projectOpen,
 }: TInfoBoxProps) {
   return (
     <Wrapper>
@@ -30,7 +30,7 @@ export default function InfoBox({
           aria-label="Have a look"
           onClick={toggleProjectOpen}
         >
-          Have a look
+          {projectOpen ? 'Close' : 'Have a look'}
         </Cta>
       </InnerWrapper>
     </Wrapper>
