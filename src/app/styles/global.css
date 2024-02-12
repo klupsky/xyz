@@ -11,12 +11,15 @@
 
   --centerImage-height: 330px;
   --centerImage-width: 248px;
+
+  --centerImage-height--open: 400px;
 }
 
 @media (min-width: 768px) {
   :root {
     --centerImage-height: 680px;
     --centerImage-width: 512px;
+    --centerImage-height--open: 95vh;
   }
 }
 

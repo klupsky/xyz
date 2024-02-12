@@ -106,13 +106,15 @@ export const OpacityVariants = {
 
 export const SizeVariants = {
   original: {
-    scale: 1,
+    height: 'var(--centerImage-height)',
+    width: 'var(--centerImage-width)',
     transition: {
       opacity: { duration: 0.5, ease: 'easeInOut' },
     },
   },
   sizeUp: {
-    scale: 1.25,
+    height: `var(--centerImage-height--open)`,
+    width: 'auto',
     transition: {
       opacity: { duration: 0.5, ease: 'easeInOut' },
       delay: 0.3,
