@@ -56,7 +56,7 @@ export default function Slider({ data }: { data: TSliderData }) {
       <Wrapper {...handleSwipe}>
         <AnimatePresence>
           <motion.div
-            key={projects[activeProjectId].image.src}
+            key={`project-${projects[activeProjectId].id}`}
             initial="enter"
             animate="initial"
             exit="exit"
@@ -80,7 +80,7 @@ export default function Slider({ data }: { data: TSliderData }) {
         />
         <AnimatePresence>
           <motion.div
-            key={`${projects[nextProjectId]}`}
+            key={`next-project-${projects[nextProjectId].id}`}
             initial="enter"
             animate="initial"
             exit="exit"
@@ -94,7 +94,7 @@ export default function Slider({ data }: { data: TSliderData }) {
         </AnimatePresence>
         <AnimatePresence>
           <motion.div
-            key={`${projects[prevProjectId]}`}
+            key={`prev-project-${projects[prevProjectId].id}`}
             initial="enter"
             animate="initial"
             exit="exit"
