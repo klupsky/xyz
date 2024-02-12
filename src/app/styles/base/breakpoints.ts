@@ -15,7 +15,7 @@ export const DEVICE = {
   mobileL: `@media (min-width: ${SIZE.mobileL}px)`,
   tablet: `@media (min-width: ${SIZE.tablet}px)`,
   laptop: `@media (min-width: ${SIZE.laptop}px)`,
-  laptopM: `@media (min-width: ${SIZE.laptopM}px)`,
+  laptopM: `@media (min-width: ${SIZE.tablet}px)`,
   laptopL: `@media (min-width: ${SIZE.laptopL}px)`,
   desktop: `@media (min-width: ${SIZE.desktop}px)`,
 }

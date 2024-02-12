@@ -33,13 +33,9 @@ export const ImageOuterWrapper = styled(motion.div)`
   z-index: 3;
   border-radius: 10px;
   border: 1px solid var(--c-black);
-  height: var(--thumbnail-height-lg);
-  width: var(--thumbnail-width-lg);
 
-  ${DEVICE.tablet} {
-    height: var(--centerImage-height);
-    width: var(--centerImage-width);
-  }
+  height: var(--centerImage-height);
+  width: var(--centerImage-width);
 `
 
 export const ImageWrapper = styled(motion.img)`

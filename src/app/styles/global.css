@@ -6,17 +6,25 @@
   --p-xs: 8px;
   --p-sm: 16px;
 
-  --thumbnail-height-sm: 115px;
-  --thumbnail-width-sm: 86px;
+  --thumbnail-height: 115px;
+  --thumbnail-width: 86px;
 
-  --thumbnail-height-md: 133px;
-  --thumbnail-width-md: 100px;
+  --centerImage-height: 330px;
+  --centerImage-width: 248px;
+}
 
-  --thumbnail-height-lg: 330px;
-  --thumbnail-width-lg: 248px;
+@media (min-width: 768px) {
+  :root {
+    --centerImage-height: 680px;
+    --centerImage-width: 512px;
+  }
+}
 
-  --centerImage-height: 680px;
-  --centerImage-width: 512px;
+@media (min-width: 1150px) {
+  :root {
+    --thumbnail-height: 330px;
+    --thumbnail-width: 248px;
+  }
 }
 
 body {

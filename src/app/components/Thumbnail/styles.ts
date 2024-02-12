@@ -7,8 +7,8 @@ export const Wrapper = styled(motion.button)<TWrapperProps>`
   position: absolute;
   overflow: hidden;
   background: transparent;
-  width: var(--thumbnail-width-sm);
-  height: var(--thumbnail-height-sm);
+  width: var(--thumbnail-width);
+  height: var(--thumbnail-height);
   border-radius: 10px;
   border: 1px solid var(--c-black);
   z-index: 2;
@@ -24,16 +24,6 @@ export const Wrapper = styled(motion.button)<TWrapperProps>`
           top: var(--p-sm);
           right: var(--p-sm);
         `};
-
-  ${DEVICE.mobileL} {
-    width: var(--thumbnail-width-md);
-    height: var(--thumbnail-height-md);
-  }
-
-  ${DEVICE.laptop} {
-    width: var(--thumbnail-width-lg);
-    height: var(--thumbnail-height-lg);
-  }
 `
 
 export const ImageWrapper = styled(motion.img)`

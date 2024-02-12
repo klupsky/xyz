@@ -20,7 +20,7 @@ export default function InfoBox({
       <InnerWrapper>
         <CreditWrapper
           animate={
-            projectOpen ? OpacityVariants.hidden : OpacityVariants.visible
+            projectOpen ? OpacityVariants.transparent : OpacityVariants.visible
           }
         >
           <h3>{artist}</h3>
@@ -28,7 +28,7 @@ export default function InfoBox({
         </CreditWrapper>
         <DateWrapper
           animate={
-            projectOpen ? OpacityVariants.hidden : OpacityVariants.visible
+            projectOpen ? OpacityVariants.transparent : OpacityVariants.visible
           }
         >
           {date}

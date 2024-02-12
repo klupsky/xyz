@@ -5,18 +5,13 @@ import { HELVETICA } from '../../styles/base/fonts'
 
 export const Wrapper = styled.div`
   position: absolute;
-  width: var(--thumbnail-width-sm);
+  width: fit-content;
   right: var(--p-sm);
   bottom: var(--p-sm);
 
-  ${DEVICE.mobileL} {
-    bottom: 95px;
-    width: var(--thumbnail-width-md);
-  }
-
   ${DEVICE.laptop} {
     bottom: 95px;
-    width: var(--thumbnail-width-lg);
+    width: var(--thumbnail-width);
   }
 `
 export const InnerWrapper = styled.div`
@@ -24,7 +19,7 @@ export const InnerWrapper = styled.div`
   flex-direction: column;
   gap: var(--p-sm);
 
-  ${DEVICE.mobileL} {
+  ${DEVICE.tablet} {
     width: 107px;
   }
 `
@@ -40,7 +35,7 @@ export const DateWrapper = styled(motion.div)`
 export const Cta = styled(motion.button)`
   border-radius: 24px;
   background-color: var(--c-white);
-  padding: 5px;
+  padding: var(--p-xs);
   ${HELVETICA.style}
   font-weight: 700;
   font-weight: bold;
@@ -49,7 +44,7 @@ export const Cta = styled(motion.button)`
   text-align: center;
   width: 100%;
   z-index: 6;
-  ${DEVICE.mobileL} {
+  ${DEVICE.tablet} {
     padding: var(--p-xs) var(--p-sm);
   }
 `
