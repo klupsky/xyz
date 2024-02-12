@@ -1,4 +1,5 @@
 'use client'
+import { HoverTapFocusVariants } from '@/app/lib/animations'
 import { motion } from 'framer-motion'
 import { ImageWrapper, Wrapper } from './styles'
 import { TThumbnailProps } from './types'
@@ -20,10 +21,10 @@ export default function Thumbnail({
         <ImageWrapper
           src={`/${src}.jpg`}
           alt={alt}
-          // sizes="50vw"
-          // fill={true}
           as={motion.img}
-          whileHover={{ scale: 1.1 }}
+          whileHover={HoverTapFocusVariants.hover}
+          whileTap={HoverTapFocusVariants.tap}
+          whileFocus={HoverTapFocusVariants.focus}
         />
       </Wrapper>
     </>

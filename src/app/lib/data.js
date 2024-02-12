@@ -11,7 +11,6 @@ const data = {
       artist: 'Johanna Hobel',
       client: 'For Vogue',
       date: 'Jun 2019',
-      cta: 'Have a look',
       slug: 'everyday-flowers',
     },
     {
@@ -24,7 +23,6 @@ const data = {
       artist: 'Johanna Hobel',
       client: 'For Wild',
       date: 'Dec 2019',
-      cta: 'Have a look',
       slug: 'the-wilder-night',
     },
     {
@@ -37,7 +35,6 @@ const data = {
       artist: 'Johanna Hobel',
       client: 'For Chanel',
       date: 'Feb 2020',
-      cta: 'Have a look',
       slug: 'smooth-memories',
     },
     {
@@ -50,7 +47,6 @@ const data = {
       artist: 'Johanna Hobel',
       client: 'For On',
       date: 'Apr 2020',
-      cta: 'Have a look',
       slug: 'the-future-universe',
     },
     {
@@ -63,7 +59,6 @@ const data = {
       artist: 'Johanna Hobel',
       client: 'For Si',
       date: 'Dec 2021',
-      cta: 'Have a look',
       slug: 'she-was-born-urban',
     },
   ],

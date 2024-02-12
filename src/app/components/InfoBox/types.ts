@@ -3,5 +3,4 @@ export type TInfoBoxProps = {
   client: string
   artist: string
   slug: string
-  cta: string
 }

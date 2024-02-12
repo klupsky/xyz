@@ -10,7 +10,6 @@ export type TProject = {
   artist: string
   client: string
   date: string
-  cta: string
   slug: string
 }
 

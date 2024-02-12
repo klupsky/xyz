@@ -27,7 +27,7 @@ export const BackgroundTitle = styled(motion.h1)`
   -webkit-text-stroke: 1px var(--c-white);
 `
 
-export const ImageWrapper = styled(motion.div)`
+export const ImageOuterWrapper = styled(motion.div)`
   overflow: hidden;
   position: absolute;
   z-index: 3;
@@ -42,9 +42,17 @@ export const ImageWrapper = styled(motion.div)`
   }
 `
 
-export const TopTitle = styled(ImageWrapper)`
+export const ImageWrapper = styled.img`
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+`
+
+export const TopTitle = styled(ImageOuterWrapper)`
   z-index: 4;
   border: none;
+  pointer-events: none;
 `
 
 export const FrontTitle = styled.h1`

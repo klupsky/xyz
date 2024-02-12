@@ -1,3 +1,4 @@
+import { HoverTapFocusVariants } from '@/app/lib/animations'
 import Link from 'next/link'
 import {
   CreditWrapper,
@@ -25,11 +26,12 @@ export default function InfoBox({
         <DateWrapper>{date}</DateWrapper>
         <Link href={`/${slug}`}>
           <Cta
-            whileHover={{ scale: 1.15 }}
-            whileFocus={{ scale: 1.15 }}
+            whileHover={HoverTapFocusVariants.hover}
+            whileTap={HoverTapFocusVariants.tap}
+            whileFocus={HoverTapFocusVariants.focus}
             aria-label="Have a look"
           >
-            {cta}
+            Have a look
           </Cta>
         </Link>
       </InnerWrapper>
