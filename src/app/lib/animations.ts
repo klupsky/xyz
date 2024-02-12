@@ -27,7 +27,7 @@ export const CenterImageVariants = {
 
 export const TitleVariants = {
   enter: {
-    y: 100,
+    y: 500,
     opacity: 0,
     transition: {
       duration: 0.5,
@@ -43,7 +43,7 @@ export const TitleVariants = {
     },
   },
   exit: {
-    y: -100,
+    y: -500,
     opacity: 0,
     transition: {
       duration: 0.5,
