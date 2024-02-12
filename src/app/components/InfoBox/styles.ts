@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   right: var(--p-sm);
   bottom: var(--p-sm);
 
-  ${DEVICE.laptop} {
+  ${DEVICE.laptopM} {
     bottom: 95px;
     width: var(--thumbnail-width);
   }
@@ -18,8 +18,8 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--p-sm);
-
-  ${DEVICE.tablet} {
+  width: fit-content;
+  ${DEVICE.laptopM} {
     width: 107px;
   }
 `
