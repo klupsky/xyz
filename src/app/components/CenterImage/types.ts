@@ -6,4 +6,5 @@ export type TCenterImageProps = {
   projectId: number
   activeProjectId: number
   projectCount: number
+  projectOpen: boolean
 }

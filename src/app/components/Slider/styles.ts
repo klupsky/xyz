@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { DEVICE } from '../../styles/base/breakpoints'
 import { HELVETICA, TUNGSTEN } from '../../styles/base/fonts'
@@ -20,7 +21,7 @@ export const Wrapper = styled.div`
   ${HELVETICA.style};
 `
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   position: absolute;
   top: var(--p-sm);
   left: var(--p-sm);
@@ -32,27 +33,5 @@ export const Title = styled.h2`
   ${DEVICE.tablet} {
     font-size: 16px;
     line-height: 1;
-  }
-`
-
-const LoadingCircle = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: var(--c-white);
-  border-radius: 50%;
-  border: 2px solid var(--c-primary);
-  animation: spin 1s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
   }
 `

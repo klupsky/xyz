@@ -4,6 +4,8 @@ import { AnimatePresence } from 'framer-motion'
 import {
   CenterImageVariants,
   HoverTapFocusVariants,
+  OpacityVariants,
+  SizeVariants,
   TitleVariants,
 } from '../../lib/animations'
 import Index from '../Index/component'
@@ -23,28 +25,46 @@ export default function CenterImage({
   projectId,
   activeProjectId,
   projectCount,
+  projectOpen,
 }: TCenterImageProps) {
   const { src, alt } = image
 
   return (
     <Wrapper>
       <AnimatePresence>
-        <BackgroundTitle variants={TitleVariants}>{title}</BackgroundTitle>
-        <ImageOuterWrapper variants={CenterImageVariants}>
+        <BackgroundTitle
+          variants={TitleVariants}
+          animate={
+            projectOpen ? OpacityVariants.hidden : OpacityVariants.visible
+          }
+        >
+          {title}
+        </BackgroundTitle>
+        <ImageOuterWrapper
+          variants={CenterImageVariants}
+          animate={projectOpen ? SizeVariants.sizeUp : SizeVariants.original}
+        >
           <ImageWrapper
-            src={`/${src}.jpg`}
+            src={`/${src}@2x.jpg`}
             alt={alt}
-            whileHover={HoverTapFocusVariants.hover}
-            whileTap={HoverTapFocusVariants.tap}
-            whileFocus={HoverTapFocusVariants.focus}
+            whileHover={!projectOpen && HoverTapFocusVariants.hover}
+            whileTap={!projectOpen && HoverTapFocusVariants.tap}
+            whileFocus={!projectOpen && HoverTapFocusVariants.focus}
           />
         </ImageOuterWrapper>
         <TopTitle variants={TitleVariants}>
-          <FrontTitle>{title}</FrontTitle>
+          <FrontTitle
+            animate={
+              projectOpen ? OpacityVariants.hidden : OpacityVariants.visible
+            }
+          >
+            {title}
+          </FrontTitle>
           <Index
             projectId={projectId}
             activeProjectId={activeProjectId}
             projectCount={projectCount}
+            projectOpen={projectOpen}
           />
         </TopTitle>
       </AnimatePresence>

@@ -55,7 +55,7 @@ export const TopTitle = styled(ImageOuterWrapper)`
   pointer-events: none;
 `
 
-export const FrontTitle = styled.h1`
+export const FrontTitle = styled(motion.h1)`
   position: absolute;
   top: 50%;
   left: 50%;

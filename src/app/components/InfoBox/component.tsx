@@ -1,4 +1,4 @@
-import { HoverTapFocusVariants } from '../../lib/animations'
+import { HoverTapFocusVariants, OpacityVariants } from '../../lib/animations'
 import {
   CreditWrapper,
   Cta,
@@ -18,11 +18,21 @@ export default function InfoBox({
   return (
     <Wrapper>
       <InnerWrapper>
-        <CreditWrapper>
+        <CreditWrapper
+          animate={
+            projectOpen ? OpacityVariants.hidden : OpacityVariants.visible
+          }
+        >
           <h3>{artist}</h3>
           <p>{client}</p>
         </CreditWrapper>
-        <DateWrapper>{date}</DateWrapper>
+        <DateWrapper
+          animate={
+            projectOpen ? OpacityVariants.hidden : OpacityVariants.visible
+          }
+        >
+          {date}
+        </DateWrapper>
         <Cta
           whileHover={HoverTapFocusVariants.hover}
           whileTap={HoverTapFocusVariants.tap}

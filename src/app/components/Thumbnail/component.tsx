@@ -1,9 +1,6 @@
 'use client'
 
-import {
-  HoverTapFocusVariants,
-  OpenProjectVariants,
-} from '../../lib/animations'
+import { HoverTapFocusVariants, OpacityVariants } from '../../lib/animations'
 import { ImageWrapper, Wrapper } from './styles'
 import { TThumbnailProps } from './types'
 
@@ -20,19 +17,17 @@ export default function Thumbnail({
       <Wrapper
         aria-label={direction}
         direction={direction}
-        onClick={() => handleClick(direction)}
+        onClick={() => !projectOpen && handleClick(direction)}
+        animate={
+          projectOpen ? OpacityVariants.transparent : OpacityVariants.visible
+        }
       >
         <ImageWrapper
           src={`/${src}.jpg`}
           alt={alt}
-          whileHover={HoverTapFocusVariants.hover}
-          whileTap={HoverTapFocusVariants.tap}
-          whileFocus={HoverTapFocusVariants.focus}
-          variants={
-            projectOpen
-              ? OpenProjectVariants.projectOpen
-              : OpenProjectVariants.projectClosed
-          }
+          whileHover={!projectOpen && HoverTapFocusVariants.hover}
+          whileTap={!projectOpen && HoverTapFocusVariants.tap}
+          whileFocus={!projectOpen && HoverTapFocusVariants.focus}
         />
       </Wrapper>
     </>

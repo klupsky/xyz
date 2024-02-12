@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
   ${DEVICE.mobileL} {
     bottom: 95px;
-    width: var(--thumbnail-width-m);
+    width: var(--thumbnail-width-md);
   }
 
   ${DEVICE.laptop} {
@@ -23,21 +23,24 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--p-sm);
-  width: 107px;
+
+  ${DEVICE.mobileL} {
+    width: 107px;
+  }
 `
 
-export const CreditWrapper = styled.div`
+export const CreditWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
 `
-export const DateWrapper = styled.div`
+export const DateWrapper = styled(motion.div)`
   text-align: right;
 `
 
 export const Cta = styled(motion.button)`
   border-radius: 24px;
   background-color: var(--c-white);
-  padding: var(--p-xs) var(--p-sm);
+  padding: 5px;
   ${HELVETICA.style}
   font-weight: 700;
   font-weight: bold;
@@ -45,4 +48,8 @@ export const Cta = styled(motion.button)`
   letter-spacing: 0.08em;
   text-align: center;
   width: 100%;
+  z-index: 6;
+  ${DEVICE.mobileL} {
+    padding: var(--p-xs) var(--p-sm);
+  }
 `

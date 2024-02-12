@@ -1,6 +1,7 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { OpacityVariants } from '../../lib/animations'
 import useSwipe from '../../lib/hooks/useSwipe'
 import Background from '../Background/component'
 import CenterImage from '../CenterImage/component'
@@ -67,7 +68,15 @@ export default function Slider({ data }: { data: TSliderData }) {
             exit="exit"
           >
             <Background image={projects[activeProjectId].image} />
-            <Title>{title}</Title>
+            <Title
+              animate={
+                projectOpen
+                  ? OpacityVariants.transparent
+                  : OpacityVariants.visible
+              }
+            >
+              {title}
+            </Title>
             <CenterImage
               title={projects[activeProjectId].title}
               image={projects[activeProjectId].image}
@@ -111,6 +120,7 @@ export default function Slider({ data }: { data: TSliderData }) {
               direction="Previous"
               image={projects[prevProjectId].image}
               handleClick={handleClick}
+              projectOpen={projectOpen}
             />
           </motion.div>
         </AnimatePresence>

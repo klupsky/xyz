@@ -1,8 +1,9 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { DEVICE } from '../../styles/base/breakpoints'
 import { TIndexDotProps } from './types'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   width: fit-content;
   display: flex;
   align-items: center;
